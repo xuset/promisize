@@ -1,4 +1,4 @@
-# promisize
+# promisize [![Build Status](https://travis-ci.org/xuset/promisize.svg?branch=master)](https://travis-ci.org/xuset/promisize) [![npm](https://img.shields.io/npm/v/promisize.svg)](https://npmjs.org/package/promisize)
 
 #### Easily support both callbacks and promises in your js lib
 
