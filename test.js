@@ -49,6 +49,18 @@ test('promise error', function (t) {
   cb('error')
 })
 
+test('call callback before promise.then', function (t) {
+  var cb = promisize(undefined)
+  t.notEqual(cb.promise, undefined)
+
+  cb(null, 'foobar')
+
+  cb.promise.then(function (result) {
+    t.equal(result, 'foobar')
+    t.end()
+  })
+})
+
 // ********************************************************************
 // ***** Pretend there is no native Promise support from here on ******
 // ********************************************************************
