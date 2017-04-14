@@ -1,6 +1,6 @@
 {
   "name": "promisize",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Easily support both callbacks and promises in your js lib",
   "main": "index.js",
   "scripts": {
