@@ -16,10 +16,10 @@ test('callback success', function (t) {
 test('callback error', function (t) {
   var cb = promisize(callback)
   t.equal(cb.promise, undefined)
-  cb('error')
+  cb(new Error('error'))
 
   function callback (err, result) {
-    t.equal(err, 'error')
+    t.ok(err instanceof Error)
     t.equal(result, undefined)
     t.end()
   }
@@ -42,11 +42,11 @@ test('promise error', function (t) {
   t.notEqual(cb.promise, undefined)
 
   cb.promise.catch(function (err) {
-    t.equal(err, 'error')
+    t.ok(err instanceof Error)
     t.end()
   })
 
-  cb('error')
+  cb(new Error('error'))
 })
 
 test('call callback before promise.then', function (t) {
@@ -91,10 +91,10 @@ test('promises unsupported and callback success', function (t) {
 test('promises unsupported and callback error', function (t) {
   var cb = promisize(callback)
   t.equal(cb.promise, undefined)
-  cb('error')
+  cb(new Error('error'))
 
   function callback (err, result) {
-    t.equal(err, 'error')
+    t.ok(err instanceof Error)
     t.equal(result, undefined)
     t.end()
   }
