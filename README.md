@@ -1,5 +1,7 @@
 # promisize [![Build Status](https://travis-ci.org/xuset/promisize.svg?branch=master)](https://travis-ci.org/xuset/promisize) [![npm](https://img.shields.io/npm/v/promisize.svg)](https://npmjs.org/package/promisize)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/xuset/promisize.svg)](https://greenkeeper.io/)
+
 #### Easily support both callbacks and promises in your js lib
 
 **promisize** takes your function's callback argument and returns a new callback with a `promise` property. When the new callback is called, it either calls the original callback or if no callback was given it fulfills the promise. **promisize** is lightweight and does not include any promise shims or dependencies but instead uses the globally defined `Promise`. If `Promise` is not defined (i.e. no native promise support) then callbacks still work as they would without **promisize**.
