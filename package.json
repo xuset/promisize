@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/xuset/promisize#readme",
   "devDependencies": {
-    "standard": "^11.0.1",
+    "standard": "^14.3.3",
     "tape": "^4.9.0"
   }
 }
